@@ -43,5 +43,5 @@ shape = SubResource( 1 )
 position = Vector2( -1.94454, 3.0052 )
 frames = SubResource( 2 )
 animation = "parar"
-frame = 2
+frame = 3
 playing = true
