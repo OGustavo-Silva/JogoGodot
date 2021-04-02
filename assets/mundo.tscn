@@ -30,19 +30,19 @@
 [ext_resource path="res://assets/sprites/correr-1.png" type="Texture" id=28]
 [ext_resource path="res://inimigo.tscn" type="PackedScene" id=29]
 
-[sub_resource type="ConvexPolygonShape2D" id=3]
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 0, 0, 60, 0, 60, 40, 0, 40 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 60, 0, 60, 40, 0, 40 )
 
 [sub_resource type="ConvexPolygonShape2D" id=4]
 points = PoolVector2Array( 0, 0, 60, 0, 60, 40, 0, 40 )
 
-[sub_resource type="ConvexPolygonShape2D" id=5]
-points = PoolVector2Array( 0, 0, 60, 0, 60, 40, 0, 40 )
+[sub_resource type="ConvexPolygonShape2D" id=8]
+points = PoolVector2Array( 0, 40, 60, 40, 60, 80, 0, 80 )
 
-[sub_resource type="ConvexPolygonShape2D" id=6]
-points = PoolVector2Array( 0, 0, 60, 0, 60, 40, 0, 40 )
-
-[sub_resource type="TileSet" id=7]
+[sub_resource type="TileSet" id=5]
 0/name = "chao(0).png 0"
 0/texture = ExtResource( 1 )
 0/tex_offset = Vector2( 0, 0 )
@@ -53,14 +53,14 @@ points = PoolVector2Array( 0, 0, 60, 0, 60, 40, 0, 40 )
 0/navigation_offset = Vector2( 0, 0 )
 0/shape_offset = Vector2( 0, 0 )
 0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape = SubResource( 3 )
+0/shape = SubResource( 1 )
 0/shape_one_way = false
 0/shape_one_way_margin = 1.0
 0/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 3 ),
+"shape": SubResource( 1 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 0/z_index = 0
@@ -74,38 +74,17 @@ points = PoolVector2Array( 0, 0, 60, 0, 60, 40, 0, 40 )
 1/navigation_offset = Vector2( 0, 0 )
 1/shape_offset = Vector2( 0, 0 )
 1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-1/shape = SubResource( 4 )
+1/shape = SubResource( 2 )
 1/shape_one_way = false
 1/shape_one_way_margin = 1.0
 1/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 4 ),
+"shape": SubResource( 2 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 1/z_index = 0
-2/name = "chao(2).png 2"
-2/texture = ExtResource( 23 )
-2/tex_offset = Vector2( 0, 0 )
-2/modulate = Color( 1, 1, 1, 1 )
-2/region = Rect2( 0, 0, 60, 40 )
-2/tile_mode = 0
-2/occluder_offset = Vector2( 0, 0 )
-2/navigation_offset = Vector2( 0, 0 )
-2/shape_offset = Vector2( 0, 0 )
-2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-2/shape = SubResource( 5 )
-2/shape_one_way = false
-2/shape_one_way_margin = 1.0
-2/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 5 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-2/z_index = 0
 3/name = "chao(3).png 3"
 3/texture = ExtResource( 24 )
 3/tex_offset = Vector2( 0, 0 )
@@ -116,41 +95,62 @@ points = PoolVector2Array( 0, 0, 60, 0, 60, 40, 0, 40 )
 3/navigation_offset = Vector2( 0, 0 )
 3/shape_offset = Vector2( 0, 0 )
 3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-3/shape = SubResource( 6 )
+3/shape = SubResource( 4 )
 3/shape_one_way = false
 3/shape_one_way_margin = 1.0
 3/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 6 ),
+"shape": SubResource( 4 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 3/z_index = 0
+4/name = "chao(2).png 4"
+4/texture = ExtResource( 23 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 0, 60, 80 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape = SubResource( 8 )
+4/shape_one_way = false
+4/shape_one_way_margin = 1.0
+4/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 8 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+4/z_index = 0
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 6.40784, 13.2544 )
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=7]
 animations = [ {
-"frames": [ ExtResource( 25 ), ExtResource( 28 ), ExtResource( 26 ), ExtResource( 27 ) ],
-"loop": true,
-"name": "correr",
-"speed": 20.0
-}, {
 "frames": [ ExtResource( 8 ), ExtResource( 13 ), ExtResource( 4 ), ExtResource( 14 ), ExtResource( 9 ), ExtResource( 6 ), ExtResource( 3 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 7 ), ExtResource( 5 ), ExtResource( 12 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
 "loop": true,
 "name": "parado",
 "speed": 8.0
+}, {
+"frames": [ ExtResource( 25 ), ExtResource( 28 ), ExtResource( 26 ), ExtResource( 27 ) ],
+"loop": true,
+"name": "correr",
+"speed": 20.0
 } ]
 
 [node name="mundo" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
-tile_set = SubResource( 7 )
+tile_set = SubResource( 5 )
 cell_size = Vector2( 60, 40 )
 format = 1
-tile_data = PoolIntArray( 327678, 0, 0, 393214, 0, 0, 393215, 0, 0, 327680, 2, 0, 458751, 0, 0, 393216, 0, 0, 458752, 0, 0, 524288, 0, 0, 589824, 0, 0, 655360, 0, 0, 720896, 0, 0, 720897, 2, 0, 720905, 3, 0, 720913, 3, 0, 720914, 3, 0, 786432, 0, 0, 786433, 0, 0, 786434, 0, 0, 786435, 0, 0, 786436, 1, 0, 786437, 1, 0, 786438, 1, 0, 786439, 1, 0, 786440, 2, 0, 786441, 3, 0, 786442, 3, 0, 786443, 3, 0, 786444, 2, 0, 786445, 2, 0, 786446, 3, 0, 786447, 3, 0, 786448, 3, 0, 786449, 3, 0, 786450, 3, 0, 786451, 3, 0, 786452, 3, 0, 786453, 3, 0, 786454, 3, 0 )
+tile_data = PoolIntArray( 327678, 0, 0, 393214, 0, 0, 393215, 0, 0, 327680, 2, 0, 458751, 0, 0, 393216, 0, 0, 458752, 0, 0, 524288, 0, 0, 589824, 0, 0, 655360, 0, 0, 720896, 0, 0, 720897, 2, 0, 720905, 3, 0, 720908, 4, 0, 720909, 4, 0, 720913, 3, 0, 720914, 3, 0, 720919, 4, 0, 720920, 4, 0, 720921, 4, 0, 720922, 4, 0, 720923, 4, 0, 786432, 0, 0, 786433, 0, 0, 786434, 0, 0, 786435, 0, 0, 786436, 1, 0, 786437, 1, 0, 786438, 1, 0, 786439, 1, 0, 786440, 2, 0, 786441, 3, 0, 786442, 3, 0, 786443, 3, 0, 786446, 3, 0, 786447, 3, 0, 786448, 3, 0, 786449, 3, 0, 786450, 3, 0, 786451, 3, 0, 786452, 3, 0, 786453, 3, 0, 786454, 3, 0 )
 
 [node name="personagem" type="KinematicBody2D" parent="."]
 position = Vector2( 457.468, 219.765 )
@@ -164,10 +164,10 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="personagem"]
 position = Vector2( 1.25, -2.5 )
 scale = Vector2( 1.5, 1.5 )
-shape = SubResource( 1 )
+shape = SubResource( 6 )
 
 [node name="sprite" type="AnimatedSprite" parent="personagem"]
-frames = SubResource( 2 )
+frames = SubResource( 7 )
 animation = "correr"
 frame = 1
 speed_scale = 0.3
