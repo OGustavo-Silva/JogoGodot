@@ -1,9 +1,11 @@
-extends StaticBody2D
+extends KinematicBody2D
 
 var flip = true
 var posicao_inicial = true
 var posicao_final = true
 var velocidade = 23.3
+const UP = Vector2(0, -1)
+var movimento = Vector2()
 
 func _ready():
 	$sprite.play("andar")
@@ -12,6 +14,8 @@ func _ready():
 	posicao_final = posicao_inicial + 500
 	
 func _process(delta):
+	movimento.y += ScriptGlobal.GRAVIDADE
+	
 	if(posicao_inicial <= posicao_final and flip):
 		$".".position.x += velocidade
 		$sprite.flip_h = true;
@@ -22,6 +26,9 @@ func _process(delta):
 		$sprite.flip_h = false
 		if($".".position.x <= posicao_inicial):
 			flip = true
+	
+		movimento = move_and_slide(movimento, UP)
+
 
 
 
