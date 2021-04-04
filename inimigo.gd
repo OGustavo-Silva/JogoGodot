@@ -14,7 +14,7 @@ func _ready():
 	
 func _process(delta):
 	movimento.y += ScriptGlobal.GRAVIDADE
-	movimento.x -= velocidade
+	#movimento.x -= velocidade
 	
 	if $DetectorParedeEsq.is_colliding():
 		print("batendo esq")
