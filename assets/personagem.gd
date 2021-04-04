@@ -2,7 +2,6 @@ extends KinematicBody2D
 
 const UP = Vector2(0, -1)
 var movimento = Vector2()
-const SPEED = 600
 const JUMP_HEIGHT = -550
 
 
@@ -10,12 +9,12 @@ func _physics_process(delta):
 	movimento.y += ScriptGlobal.GRAVIDADE
 	
 	if Input.is_action_pressed("ui_right"):
-		movimento.x = SPEED
+		movimento.x = ScriptGlobal.VELOCIDADE
 		$sprite.play("correr")
 		#para flipar viraro personagemao outro lado
 		$sprite.flip_h = true
 	elif Input.is_action_pressed("ui_left"):
-		movimento.x = -SPEED
+		movimento.x = -ScriptGlobal.VELOCIDADE
 		$sprite.play("correr")
 		$sprite.flip_h = false
 	else:

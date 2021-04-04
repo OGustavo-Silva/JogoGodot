@@ -5,29 +5,26 @@ var posicao_inicial = true
 var posicao_final = true
 var velocidade = 23.3
 const UP = Vector2(0, -1)
-var movimento = Vector2()
+var movimento = Vector2.ZERO
 
 func _ready():
 	$sprite.play("andar")
-	#ponto onde o inimigo está
-	posicao_inicial = $".".position.x
-	posicao_final = posicao_inicial + 500
+	set_physics_process(false)
+	movimento.x = -velocidade
 	
 func _process(delta):
 	movimento.y += ScriptGlobal.GRAVIDADE
+	movimento.x -= velocidade
 	
-	if(posicao_inicial <= posicao_final and flip):
-		$".".position.x += velocidade
-		$sprite.flip_h = true;
-		if($".".position.x >= posicao_final):
-			flip = false
-	if($".".position.x >= posicao_inicial and !flip):
-		$".".position.x -= velocidade
-		$sprite.flip_h = false
-		if($".".position.x <= posicao_inicial):
-			flip = true
+	if $DetectorParedeEsq.is_colliding():
+		print("batendo esq")
+		movimento.x *= -1
+	elif $DetectorParedeDir.is_colliding():
+		print("batendo dir")
+		movimento.x *= -1
+		
 	
-		movimento = move_and_slide(movimento, UP)
+	movimento.y = move_and_slide(movimento, UP).y
 
 
 
